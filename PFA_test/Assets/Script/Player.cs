@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed;
+    public float speed = 4;
     public float jumpPower;
     bool jumping;
+    public int jumpCount = 0;
 
     Vector3 movement;
     float h, v;
@@ -26,6 +27,12 @@ public class Player : MonoBehaviour
         movement = movement.normalized * speed * Time.deltaTime;
         rb.MovePosition(transform.position + movement);
 
+        if(jumpCount < 2)
+        {
+            run();
+        }
+        else
+            jumping = false;
         jump();
     }
     
@@ -33,18 +40,29 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!jumping)
+            jumpCount++;
+            
+            if (jumping)
             {
-                jumping = true;
                 rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
             }
-            else return;
         }
+    }
+
+    void run()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+            speed = 9;
+        else
+            speed = 4;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("ground"))
-            jumping = false;
+        {
+            jumping = true;
+            jumpCount = 0;
+        }
     }
 }
