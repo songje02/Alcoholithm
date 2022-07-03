@@ -1,0 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RotationTree : MonoBehaviour
+{
+    //반대 방향으로 돌리려면 값을 음수로 주면 됨.
+
+    public float rotateSpeed;
+
+    void Update()
+    {
+        transform.Rotate(new Vector3(rotateSpeed, 0f, 0f) * Time.deltaTime, Space.World);        
+    }
+}
