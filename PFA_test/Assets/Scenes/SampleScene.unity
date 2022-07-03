@@ -214,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 26319893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -602,9 +602,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ae8839348e1b964d87c1d0e5dbb54ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f0ce692513b2ca4c89be0c7bbc78d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   player: {fileID: 336530931}
   dist: 7
   height: 5
@@ -703,3 +704,9 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343759591}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+=======
+  offset: {x: 0, y: 5, z: 0}
+  playerTrans: {fileID: 336530931}
+  camera_Speed: 0.1
+  dist: 0
+>>>>>>> 5843606b82ece35c9df9af9f56736748cd109a46
