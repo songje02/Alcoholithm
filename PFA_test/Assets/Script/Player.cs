@@ -4,18 +4,38 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 4;
-    public float jumpPower;
-    bool jumping;
     public int jumpCount = 0;
+    public float dieCoordinate = -7.0f; 
 
+    public float speed = 10.0f;
+    public float jumpPower;
+
+    public float rotateSpeed = 10.0f;
+
+    bool jumping;
+    
     Vector3 movement;
     float h, v;
+    float rh, rv;
     Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
+        rh = Input.GetAxis("Horizontal");
+        rv = Input.GetAxis("Vertical");
+
+        Vector3 dir = new Vector3(rh, 0, rv);
+
+        if(!(h==0 && v==0))
+        {
+            transform.position+=dir*speed*Time.deltaTime;
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime*rotateSpeed);
+        }
     }
 
     void Update()
@@ -31,9 +51,11 @@ public class Player : MonoBehaviour
         {
             run();
         }
-        else
-            jumping = false;
+        else jumping = false;
+
         jump();
+
+        Die();
     }
     
     void jump()
@@ -55,6 +77,14 @@ public class Player : MonoBehaviour
             speed = 9;
         else
             speed = 4;
+    }
+
+    void Die()
+    {
+        if(gameObject.transform.position.y<=dieCoordinate)
+        {
+            Debug.Log("플레이어 죽음");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
