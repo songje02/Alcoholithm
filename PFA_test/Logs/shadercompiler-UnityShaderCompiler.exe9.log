@@ -1,7 +1,6 @@
 Base path: 'C:/Uni/2020.3.21f1/Editor/Data', plugins path 'C:/Uni/2020.3.21f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
 
-<<<<<<< HEAD
 Cmd: shutdown
-=======
->>>>>>> 9577301a0399aede206fe0b9648e927c04c8d5d0
+
+Quitting shader compiler process

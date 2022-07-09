@@ -60,9 +60,9 @@
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\UIManager.cs" />
     <Compile Include="Assets\Script\CameraController.cs" />
-    <Compile Include="Assets\Script\LockerController.cs" />
     <Compile Include="Assets\Script\DialogCtr.cs" />
     <Compile Include="Assets\Script\SeesawController.cs" />
+    <Compile Include="Assets\Script\LockerController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Text\Test.txt" />
