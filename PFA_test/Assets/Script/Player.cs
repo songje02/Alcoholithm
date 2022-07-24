@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -19,24 +18,6 @@ public class Player : MonoBehaviour
     float h, v;
     float rh, rv;
     Rigidbody rb;
-
-    public GameManager GM;
-
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("School"))  // 놀이터 -> 학교
-        {
-            GM.PlayerGround_Pos = new Vector3(this.transform.position.x -5, this.transform.position.y + 1, this.transform.position.z); //놀이터에서 플레이어 위치값 저장
-            SceneManager.LoadScene("School");
-        }
-        else if (other.CompareTag("PlayGround")) // 학교 -> 놀이터
-        {
-            GM.School_Pos = new Vector3(this.transform.position.x - 3, this.transform.position.y + 1, this.transform.position.z); //학교에서 플레이어 위치값 저장
-            SceneManager.LoadScene("PlayGround");
-        }
-    }
-
 
     void Start()
     {
@@ -75,10 +56,8 @@ public class Player : MonoBehaviour
         jump();
 
         Die();
-
-        //Debug.Log(this.transform.position);
     }
-
+    
     void jump()
     {
         if (Input.GetKeyDown(KeyCode.Space))

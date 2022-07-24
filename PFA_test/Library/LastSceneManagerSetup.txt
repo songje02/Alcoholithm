@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/PlayGround_wse.unity
-=======
-- path: Assets/Scenes/School.unity
->>>>>>> 96533d30fd2451c613d0e88328e76d0b995bf5a7
   isLoaded: 1
   isActive: 1
   isSubScene: 0
