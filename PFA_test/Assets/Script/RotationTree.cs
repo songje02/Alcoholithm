@@ -10,6 +10,6 @@ public class RotationTree : MonoBehaviour
 
     void Update()
     {
-        transform.Rotate(new Vector3(0f, rotateSpeed, 0f) * Time.deltaTime, Space.Self);  
+        this.transform.Rotate(new Vector3(0f, rotateSpeed, 0f) * Time.deltaTime, Space.Self);  
     }
 }
