@@ -47,6 +47,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        rb.constraints = RigidbodyConstraints.FreezeRotation;
     }
 
     private void FixedUpdate()
@@ -61,6 +63,8 @@ public class Player : MonoBehaviour
             transform.position+=dir*speed*Time.deltaTime;
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime*rotateSpeed);
         }
+
+      
     }
 
     private void Update()
