@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) // 씬전환시 이벤트 호출
     {
-        if(Scene_Count > 1)
+        if(Scene_Count >= 2)
         {
             if (scene.name == "PlayGround")
             {
@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
         Instantiate(player);
         is_School = false;
         is_PlayGround = false;
+
     }
 
     // Update is called once per frame
