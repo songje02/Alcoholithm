@@ -24,6 +24,12 @@ public class Player : MonoBehaviour
 
     Animator anim;
 
+    public bool SavePoint_1 = false;
+    public bool SavePoint_2 = false;
+    public bool SavePoint_3 = false;
+    public bool SavePoint_4 = false;
+
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -47,8 +53,12 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
         rb.constraints = RigidbodyConstraints.FreezeRotation;
+
+        SavePoint_1 = true;
+        SavePoint_2 = false;
+        SavePoint_3 = false;
+        SavePoint_4 = false;
     }
 
     private void FixedUpdate()
@@ -102,7 +112,8 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             jumpCount++;
-            
+
+
             if (jumping)
             {
                 rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
@@ -136,6 +147,23 @@ public class Player : MonoBehaviour
         if(gameObject.transform.position.y<=dieCoordinate)
         {
             Debug.Log("플레이어 죽음");
+            Debug.Log(SavePoint_1);
+            if (SavePoint_1)
+            {
+                this.gameObject.transform.position = new Vector3(0,0,0);
+            }
+            else if (SavePoint_2)
+            {
+                this.gameObject.transform.position = new Vector3();
+            }
+            else if (SavePoint_3)
+            {
+                this.gameObject.transform.position = new Vector3();
+            }
+            else if (SavePoint_4)
+            {
+                this.gameObject.transform.position = new Vector3();
+            }
         }
     }
 
@@ -147,5 +175,41 @@ public class Player : MonoBehaviour
             jumping = true;
             jumpCount = 0;
         }
+
+        Check_Savepoint(collision);
+
     }
+
+    void Check_Savepoint(Collision collision)
+    {
+        //if (collision.gameObject.CompareTag("save_one"))
+        //{
+        //    if (SavePoint_2 != true)
+        //    {
+        //        SavePoint_1 = true;
+        //    }
+        //}
+        //else if (collision.gameObject.CompareTag("save_two"))
+        //{
+        //    if (SavePoint_3 != true)
+        //    {
+        //        SavePoint_1 = false;
+        //        SavePoint_2 = true;
+        //    }
+        //}
+        //else if (collision.gameObject.CompareTag("save_three"))
+        //{
+        //    if (SavePoint_4 != true)
+        //    {
+        //        SavePoint_2 = false;
+        //        SavePoint_3 = true;
+        //    }
+        //}
+        //else if (collision.gameObject.CompareTag("save_four"))
+        //{
+        //    SavePoint_3 = false;
+        //    SavePoint_4 = true;
+        //}
+    }
+
 }

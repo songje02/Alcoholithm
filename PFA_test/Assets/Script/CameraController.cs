@@ -5,19 +5,22 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Vector3 offset;
-    public Transform playerTrans;
     public float camera_Speed = 0.1f;
     public float dist;
 
+    Transform playerTrans;
+    GameObject instatiate_player; // 생성된 플레이어
+
     void Start()
     {
-        
+        instatiate_player = GameObject.Find("Player_character(Clone)");
+        playerTrans = instatiate_player.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void LateUpdate()

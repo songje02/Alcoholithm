@@ -1798,9 +1798,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6300099757122862348}
   - component: {fileID: 5829006076724109499}
-  - component: {fileID: 5829006076724109498}
   - component: {fileID: 5829006076724109497}
   - component: {fileID: 5829006076724109496}
+  - component: {fileID: 4161645103731713005}
   m_Layer: 0
   m_Name: Player_character
   m_TagString: Untagged
@@ -1838,22 +1838,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!136 &5829006076724109498
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6639893498598614966}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &5829006076724109497
 Animator:
   serializedVersion: 3
@@ -1867,7 +1853,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: de74816ec4c27914188325dba6abb66b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1887,10 +1873,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpCount: 0
   dieCoordinate: -7
-  speed: 10
-  jumpPower: 0
+  speed: 5
+  jumpPower: 5
   rotateSpeed: 10
   GM: {fileID: 7354266215002140269, guid: 7ffe3548f2f4ab94c8b3a5b02a6b2af5, type: 3}
+  SavePoint_1: 0
+  SavePoint_2: 0
+  SavePoint_3: 0
+  SavePoint_4: 0
+--- !u!136 &4161645103731713005
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639893498598614966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 6
+  m_Height: 32
+  m_Direction: 1
+  m_Center: {x: 0.82, y: 13, z: 0.9}
 --- !u!1 &6812438656990606226
 GameObject:
   m_ObjectHideFlags: 0
