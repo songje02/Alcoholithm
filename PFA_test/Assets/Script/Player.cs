@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
     public bool SavePoint_4 = false;
 
 
+    bool isBorder;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -74,7 +76,7 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime*rotateSpeed);
         }
 
-      
+        StopToWall();
     }
 
     private void Update()
@@ -98,10 +100,12 @@ public class Player : MonoBehaviour
     {
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
-        
 
-        movement = new Vector3(h, 0, v).normalized;
-        transform.position += movement * speed * Time.deltaTime;  
+        if (!isBorder)
+        {
+            movement = new Vector3(h, 0, v).normalized;
+            transform.position += movement * speed * Time.deltaTime;
+        }
 
         anim.SetBool("is_Walking", movement != Vector3.zero);
     }
@@ -210,6 +214,12 @@ public class Player : MonoBehaviour
         //    SavePoint_3 = false;
         //    SavePoint_4 = true;
         //}
+    }
+
+    void StopToWall()
+    {
+        Debug.DrawRay(transform.position, transform.forward * 5, Color.green);
+        isBorder = Physics.Raycast(transform.position, transform.forward, 5, LayerMask.GetMask("Wall"));
     }
 
 }

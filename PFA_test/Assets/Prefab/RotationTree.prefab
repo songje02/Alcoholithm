@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5259784429294340856}
   - component: {fileID: 5259784429294340857}
   - component: {fileID: 5259784429294340806}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RotationTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
