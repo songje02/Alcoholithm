@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -190,6 +190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: piano_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7882533493131947111, guid: 27b4b8bab1990a04a9f674c0d9dc32b3, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27b4b8bab1990a04a9f674c0d9dc32b3, type: 3}
 --- !u!4 &7551605 stripped
@@ -211,7 +215,7 @@ GameObject:
   - component: {fileID: 10043872}
   m_Layer: 0
   m_Name: leftwall (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,6 +307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -376,6 +384,10 @@ PrefabInstance:
     - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_Name
       value: Desk (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
@@ -454,7 +466,7 @@ GameObject:
   - component: {fileID: 77981611}
   m_Layer: 0
   m_Name: leftwall (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -549,7 +561,7 @@ GameObject:
   - component: {fileID: 124101070}
   m_Layer: 0
   m_Name: leftwall (15)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -640,6 +652,10 @@ PrefabInstance:
     - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_Name
       value: Locker (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 6493530121748985198, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_RootOrder
@@ -766,6 +782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &165545080 stripped
@@ -787,7 +807,7 @@ GameObject:
   - component: {fileID: 177895840}
   m_Layer: 0
   m_Name: leftwall (11)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -935,6 +955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &180641882 stripped
@@ -952,6 +976,10 @@ PrefabInstance:
     - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_Name
       value: Desk (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
@@ -1030,7 +1058,7 @@ GameObject:
   - component: {fileID: 213432330}
   m_Layer: 0
   m_Name: board (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1121,6 +1149,10 @@ PrefabInstance:
     - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_Name
       value: Desk (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
@@ -1238,7 +1270,7 @@ GameObject:
   - component: {fileID: 246764009}
   m_Layer: 0
   m_Name: leftwall (15)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1333,7 +1365,7 @@ GameObject:
   - component: {fileID: 305753327}
   m_Layer: 0
   m_Name: backwall (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1428,7 +1460,7 @@ GameObject:
   - component: {fileID: 366874761}
   m_Layer: 0
   m_Name: leftwall (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1520,6 +1552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Locker (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6493530121748985198, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1592,7 +1628,7 @@ GameObject:
   - component: {fileID: 388088246}
   m_Layer: 0
   m_Name: leftwall (10)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1740,6 +1776,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &394410497 stripped
@@ -1761,7 +1801,7 @@ GameObject:
   - component: {fileID: 394451059}
   m_Layer: 0
   m_Name: leftwall (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1861,7 +1901,7 @@ GameObject:
   - component: {fileID: 414849934}
   m_Layer: 0
   m_Name: backwall (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1956,7 +1996,7 @@ GameObject:
   - component: {fileID: 430648414}
   m_Layer: 0
   m_Name: leftwall (13)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2104,6 +2144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &435840759 stripped
@@ -2126,6 +2170,10 @@ PrefabInstance:
     - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_Name
       value: Locker (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 6493530121748985198, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_RootOrder
@@ -2199,7 +2247,7 @@ GameObject:
   - component: {fileID: 475046395}
   m_Layer: 0
   m_Name: leftwall (11)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2294,7 +2342,7 @@ GameObject:
   - component: {fileID: 478731370}
   m_Layer: 0
   m_Name: leftwall (12)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2599,6 +2647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &528170400 stripped
@@ -2620,7 +2672,7 @@ GameObject:
   - component: {fileID: 533757009}
   m_Layer: 0
   m_Name: leftwall (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2768,6 +2820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &536422923 stripped
@@ -2863,7 +2919,7 @@ GameObject:
   - component: {fileID: 554953305}
   m_Layer: 0
   m_Name: leftwall (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3081,6 +3137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -3163,6 +3223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -3240,7 +3304,7 @@ GameObject:
   - component: {fileID: 660145460}
   m_Layer: 0
   m_Name: leftwall (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3335,7 +3399,7 @@ GameObject:
   - component: {fileID: 690985957}
   m_Layer: 0
   m_Name: forwardwall (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3430,7 +3494,7 @@ GameObject:
   - component: {fileID: 700907777}
   m_Layer: 0
   m_Name: leftwall (9)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3564,6 +3628,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3694,6 +3762,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &770233291 stripped
@@ -3715,7 +3787,7 @@ GameObject:
   - component: {fileID: 783938441}
   m_Layer: 0
   m_Name: leftwall (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3810,7 +3882,7 @@ GameObject:
   - component: {fileID: 825673735}
   m_Layer: 0
   m_Name: leftwall (14)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3905,7 +3977,7 @@ GameObject:
   - component: {fileID: 854783699}
   m_Layer: 0
   m_Name: flatform
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4053,6 +4125,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &938046337 stripped
@@ -4074,7 +4150,7 @@ GameObject:
   - component: {fileID: 988572642}
   m_Layer: 0
   m_Name: leftwall (14)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4169,7 +4245,7 @@ GameObject:
   - component: {fileID: 995468246}
   m_Layer: 0
   m_Name: leftwall (12)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4264,7 +4340,7 @@ GameObject:
   - component: {fileID: 1054199886}
   m_Layer: 0
   m_Name: board (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4356,6 +4432,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -4430,6 +4510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -4503,6 +4587,10 @@ PrefabInstance:
     - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_Name
       value: Desk (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
@@ -4581,7 +4669,7 @@ GameObject:
   - component: {fileID: 1164143026}
   m_Layer: 0
   m_Name: leftwall (10)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4726,7 +4814,7 @@ GameObject:
   - component: {fileID: 1202768673}
   m_Layer: 0
   m_Name: leftwall (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4895,7 +4983,7 @@ GameObject:
   - component: {fileID: 1250386119}
   m_Layer: 0
   m_Name: leftwall (11)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4987,6 +5075,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -5064,7 +5156,7 @@ GameObject:
   - component: {fileID: 1273640689}
   m_Layer: 0
   m_Name: leftwall (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5198,7 +5290,7 @@ GameObject:
   - component: {fileID: 1279325245}
   m_Layer: 0
   m_Name: ground
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5290,6 +5382,10 @@ PrefabInstance:
     - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_Name
       value: Desk (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
@@ -5447,7 +5543,7 @@ GameObject:
   - component: {fileID: 1358325229}
   m_Layer: 0
   m_Name: leftwall (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5595,6 +5691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &1380635847 stripped
@@ -5620,6 +5720,10 @@ PrefabInstance:
     - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_Name
       value: Desk (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
@@ -5751,6 +5855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &1438697923 stripped
@@ -5846,7 +5954,7 @@ GameObject:
   - component: {fileID: 1457378797}
   m_Layer: 0
   m_Name: leftwall (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5977,6 +6085,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -6054,7 +6166,7 @@ GameObject:
   - component: {fileID: 1491265760}
   m_Layer: 0
   m_Name: leftwall (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6202,6 +6314,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &1525635171 stripped
@@ -6275,6 +6391,10 @@ PrefabInstance:
     - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
       propertyPath: m_Name
       value: chair_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
@@ -6350,6 +6470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &1586935778 stripped
@@ -6367,6 +6491,10 @@ PrefabInstance:
     - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_Name
       value: Locker (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 6493530121748985198, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_RootOrder
@@ -6627,6 +6755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -6704,7 +6836,7 @@ GameObject:
   - component: {fileID: 1665022332}
   m_Layer: 0
   m_Name: leftwall (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6796,6 +6928,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: piano chair_low (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 786903587805153108, guid: 41c05a5810fe73246bbe8089f2a1fa11, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 7993342961614333382, guid: 41c05a5810fe73246bbe8089f2a1fa11, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -6873,7 +7009,7 @@ GameObject:
   - component: {fileID: 1672901143}
   m_Layer: 0
   m_Name: leftwall (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7098,7 +7234,7 @@ GameObject:
   - component: {fileID: 1694900416}
   m_Layer: 0
   m_Name: forwardwall (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7245,6 +7381,10 @@ PrefabInstance:
     - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
       propertyPath: m_Name
       value: chair_low (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
@@ -7431,6 +7571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -7601,6 +7745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &1770116496 stripped
@@ -7697,6 +7845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Locker
       objectReference: {fileID: 0}
+    - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 6493530121748985198, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7765,6 +7917,10 @@ PrefabInstance:
     - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_Name
       value: Desk (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
@@ -7896,6 +8052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &1847695178 stripped
@@ -7917,7 +8077,7 @@ GameObject:
   - component: {fileID: 1867950993}
   m_Layer: 0
   m_Name: leftwall (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8017,7 +8177,7 @@ GameObject:
   - component: {fileID: 1921100356}
   m_Layer: 0
   m_Name: leftwall (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8109,6 +8269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8186,7 +8350,7 @@ GameObject:
   - component: {fileID: 1951887021}
   m_Layer: 0
   m_Name: leftwall (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8277,6 +8441,10 @@ PrefabInstance:
     - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_Name
       value: Locker (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 6493530121748985198, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_RootOrder
@@ -8403,6 +8571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &1999767387 stripped
@@ -8424,7 +8596,7 @@ GameObject:
   - component: {fileID: 2003204184}
   m_Layer: 0
   m_Name: leftwall (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8519,7 +8691,7 @@ GameObject:
   - component: {fileID: 2009302415}
   m_Layer: 0
   m_Name: leftwall (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8611,6 +8783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -8684,6 +8860,10 @@ PrefabInstance:
     - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_Name
       value: Desk (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
@@ -8762,7 +8942,7 @@ GameObject:
   - component: {fileID: 2029580670}
   m_Layer: 0
   m_Name: leftwall (9)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8854,6 +9034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -8933,6 +9117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9010,7 +9198,7 @@ GameObject:
   - component: {fileID: 2066151896}
   m_Layer: 0
   m_Name: leftwall (11)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9102,6 +9290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desk (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -9175,6 +9367,10 @@ PrefabInstance:
     - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_Name
       value: Locker (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493530121748985197, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 6493530121748985198, guid: 7701e54d613265843beafba0ec97fb64, type: 3}
       propertyPath: m_RootOrder
@@ -9301,6 +9497,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: chair_low (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8475908057921956386, guid: 716201445392ad74cbdd624083d8758f, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 716201445392ad74cbdd624083d8758f, type: 3}
 --- !u!4 &2101174389 stripped
@@ -9318,6 +9518,10 @@ PrefabInstance:
     - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_Name
       value: Desk (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795619087870618441, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 8703561157824528740, guid: c8318b913fea4b14189f44eb8834a477, type: 3}
       propertyPath: m_RootOrder
@@ -9396,7 +9600,7 @@ GameObject:
   - component: {fileID: 2136514127}
   m_Layer: 0
   m_Name: leftwall (13)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

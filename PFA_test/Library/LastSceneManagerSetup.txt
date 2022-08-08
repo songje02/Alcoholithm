@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ChildRoom.unity
+- path: Assets/Scenes/School_JW.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

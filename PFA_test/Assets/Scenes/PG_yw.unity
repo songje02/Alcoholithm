@@ -763,6 +763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: playground_slidepp1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bf024544f3f97574c8bb1390f143d787, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf024544f3f97574c8bb1390f143d787, type: 3}
 --- !u!1001 &1990822065
@@ -779,6 +783,10 @@ PrefabInstance:
     - target: {fileID: 5259784429294340807, guid: 7a9cc9b5386195b45af577facdd5f0f6, type: 3}
       propertyPath: m_Name
       value: RotationTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259784429294340807, guid: 7a9cc9b5386195b45af577facdd5f0f6, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     - target: {fileID: 5259784429294340858, guid: 7a9cc9b5386195b45af577facdd5f0f6, type: 3}
       propertyPath: m_RootOrder
