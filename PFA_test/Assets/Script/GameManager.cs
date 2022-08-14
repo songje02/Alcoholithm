@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public GameObject player;
+    public bool isSoundOn;
 
 
     public Vector3 PlayerGround_Pos; //포탈 이동시 플레이어 위치값 변경
@@ -62,8 +63,13 @@ public class GameManager : MonoBehaviour
         is_School = false;
         is_PlayGround = false;
 
+        isSoundOn = true;
     }
 
+    public void soundToggle()
+    {
+        isSoundOn = !isSoundOn;
+    }
     // Update is called once per frame
     void Update()
     {
