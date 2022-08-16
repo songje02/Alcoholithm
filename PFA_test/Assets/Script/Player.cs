@@ -178,6 +178,28 @@ public class Player : MonoBehaviour
             jumpCount = 0;
         }
 
+        if(collision.gameObject.CompareTag("savepoint1"))
+        {
+            anim.SetBool("is_Jumping", false);
+            jumping = true;
+            jumpCount = 0;
+
+            //조명 켜지기
+            GameObject obj1 = GameObject.Find("savepoint1");
+            obj1.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+
+        if (collision.gameObject.CompareTag("savepoint2"))
+        {
+            anim.SetBool("is_Jumping", false);
+            jumping = true;
+            jumpCount = 0;
+
+            //조명 켜지기
+            GameObject obj2 = GameObject.Find("savepoint2");
+            obj2.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+
         Check_Savepoint(collision);
 
     }
