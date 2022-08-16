@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 63740303}
   m_Layer: 0
   m_Name: Potal_School
-  m_TagString: ground
+  m_TagString: School
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

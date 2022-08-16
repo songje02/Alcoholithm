@@ -35,7 +35,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("School"))  // ³îÀÌÅÍ -> ÇÐ±³
+        if (other.CompareTag("ChildRoom"))
+        {
+            SceneManager.LoadScene("PlayGround");
+        }
+        else if (other.CompareTag("School"))  // ³îÀÌÅÍ -> ÇÐ±³
         {
             SceneManager.LoadScene("School");
         }
@@ -201,7 +205,6 @@ public class Player : MonoBehaviour
         }
 
         Check_Savepoint(collision);
-
     }
 
     void Check_Savepoint(Collision collision)

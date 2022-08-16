@@ -10,6 +10,7 @@ TagManager:
   - wall
   - savepoint1
   - savepoint2
+  - ChildRoom
   layers:
   - Default
   - TransparentFX
