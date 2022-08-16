@@ -13,9 +13,12 @@ public class GameManager : MonoBehaviour
 
     public Vector3 PlayerGround_Pos; //포탈 이동시 플레이어 위치값 변경
     public Vector3 School_Pos;
+    public Vector3 Children_Room;
+
 
     public bool is_School;
     public bool is_PlayGround;
+    public bool is_Children_Room;
 
 
     private void OnEnable()
@@ -34,6 +37,11 @@ public class GameManager : MonoBehaviour
         {
             is_School = true;
             Instantiate(player, School_Pos, transform.rotation);
+        }
+        else if (scene.name == "ChildRoom")
+        {
+            is_Children_Room = true;
+            Instantiate(player, Children_Room, transform.rotation);
         }
     }
 
@@ -59,7 +67,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(player);
+        //Instantiate(player);
         is_School = false;
         is_PlayGround = false;
 
