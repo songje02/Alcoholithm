@@ -1058,7 +1058,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
-  m_Range: 2163.78
+  m_Range: 0
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -3792,8 +3792,8 @@ GameObject:
   - component: {fileID: 1286024697}
   - component: {fileID: 1286024696}
   m_Layer: 0
-  m_Name: savepoint2
-  m_TagString: savepoint2
+  m_Name: Save_2
+  m_TagString: Save_point_2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4755,8 +4755,8 @@ GameObject:
   - component: {fileID: 1696229114}
   - component: {fileID: 1696229113}
   m_Layer: 0
-  m_Name: savepoint1
-  m_TagString: savepoint1
+  m_Name: Save_1
+  m_TagString: Save_point_1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

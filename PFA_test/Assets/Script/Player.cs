@@ -24,11 +24,7 @@ public class Player : MonoBehaviour
 
     Animator anim;
 
-    public bool SavePoint_1 = false;
-    public bool SavePoint_2 = false;
-    public bool SavePoint_3 = false;
-    public bool SavePoint_4 = false;
-
+    Vector3 Save_Pos;
 
     bool isBorder;
 
@@ -58,11 +54,6 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
-
-        SavePoint_1 = true;
-        SavePoint_2 = false;
-        SavePoint_3 = false;
-        SavePoint_4 = false;
     }
 
     private void FixedUpdate()
@@ -153,23 +144,7 @@ public class Player : MonoBehaviour
         if(gameObject.transform.position.y<=dieCoordinate)
         {
             Debug.Log("플레이어 죽음");
-            Debug.Log(SavePoint_1);
-            if (SavePoint_1)
-            {
-                this.gameObject.transform.position = new Vector3(0,0,0);
-            }
-            else if (SavePoint_2)
-            {
-                this.gameObject.transform.position = new Vector3();
-            }
-            else if (SavePoint_3)
-            {
-                this.gameObject.transform.position = new Vector3();
-            }
-            else if (SavePoint_4)
-            {
-                this.gameObject.transform.position = new Vector3();
-            }
+            this.gameObject.transform.position = Save_Pos;
         }
     }
 
@@ -177,66 +152,74 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ground"))
         {
-            anim.SetBool("is_Jumping", false);
-            jumping = true;
-            jumpCount = 0;
-        }
-
-        if(collision.gameObject.CompareTag("savepoint1"))
-        {
-            anim.SetBool("is_Jumping", false);
-            jumping = true;
-            jumpCount = 0;
-
-            //조명 켜지기
-            GameObject obj1 = GameObject.Find("savepoint1");
-            obj1.gameObject.transform.GetChild(0).gameObject.SetActive(true);
-        }
-
-        if (collision.gameObject.CompareTag("savepoint2"))
-        {
-            anim.SetBool("is_Jumping", false);
-            jumping = true;
-            jumpCount = 0;
-
-            //조명 켜지기
-            GameObject obj2 = GameObject.Find("savepoint2");
-            obj2.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            Jump_Reset();
         }
 
         Check_Savepoint(collision);
     }
 
+    void Jump_Reset()
+    {
+        anim.SetBool("is_Jumping", false);
+        jumping = true;
+        jumpCount = 0;
+    }
+
+
     void Check_Savepoint(Collision collision)
     {
-        //if (collision.gameObject.CompareTag("save_one"))
-        //{
-        //    if (SavePoint_2 != true)
-        //    {
-        //        SavePoint_1 = true;
-        //    }
-        //}
-        //else if (collision.gameObject.CompareTag("save_two"))
-        //{
-        //    if (SavePoint_3 != true)
-        //    {
-        //        SavePoint_1 = false;
-        //        SavePoint_2 = true;
-        //    }
-        //}
-        //else if (collision.gameObject.CompareTag("save_three"))
-        //{
-        //    if (SavePoint_4 != true)
-        //    {
-        //        SavePoint_2 = false;
-        //        SavePoint_3 = true;
-        //    }
-        //}
-        //else if (collision.gameObject.CompareTag("save_four"))
-        //{
-        //    SavePoint_3 = false;
-        //    SavePoint_4 = true;
-        //}
+        if (GM.is_Children_Room)
+        {
+            Save_LightON(collision);
+        }
+        else if (GM.is_School)
+        {
+            Save_LightON(collision);
+        }
+        else if (GM.is_PlayGround)
+        {
+            Save_LightON(collision);
+        }
+    }
+
+    void Save_LightON(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Save_point_1"))
+        {
+            Debug.Log("test");
+            GameObject obj1 = GameObject.Find("Save_1");
+            obj1.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            Save_Pos = obj1.transform.position;
+            Jump_Reset();
+        }
+        else if (collision.gameObject.CompareTag("Save_point_2"))
+        {
+            GameObject obj1 = GameObject.Find("Save_2");
+            obj1.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            Save_Pos = obj1.transform.position;
+            Jump_Reset();
+        }
+        else if (collision.gameObject.CompareTag("Save_point_3"))
+        {
+            GameObject obj1 = GameObject.Find("Save_3");
+            obj1.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            Save_Pos = obj1.transform.position;
+            Jump_Reset();
+        }
+        else if (collision.gameObject.CompareTag("Save_point_4"))
+        {
+            GameObject obj1 = GameObject.Find("Save_4");
+            obj1.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            Save_Pos = obj1.transform.position;
+            Jump_Reset();
+        }
+        else if (collision.gameObject.CompareTag("Save_point_5"))
+        {
+            GameObject obj1 = GameObject.Find("Save_5");
+            obj1.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            Save_Pos = obj1.transform.position;
+            Jump_Reset();
+        }
     }
 
     void StopToWall()

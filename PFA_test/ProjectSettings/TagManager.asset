@@ -8,9 +8,12 @@ TagManager:
   - School
   - PlayGround
   - wall
-  - savepoint1
-  - savepoint2
   - ChildRoom
+  - Save_point_1
+  - Save_point_2
+  - Save_point_3
+  - Save_point_4
+  - Save_point_5
   layers:
   - Default
   - TransparentFX
