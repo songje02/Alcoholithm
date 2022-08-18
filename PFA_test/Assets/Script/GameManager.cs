@@ -83,6 +83,11 @@ public class GameManager : MonoBehaviour
     {
         isSoundOn = !isSoundOn;
     }
+
+    public void gameExit()
+    {
+        Application.Quit();
+    }
     // Update is called once per frame
     void Update()
     {
