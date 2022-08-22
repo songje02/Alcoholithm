@@ -1662,6 +1662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 6639893498598614966, guid: 2a12f85dfd1c8b14dbab865ac8015aa6, type: 3}
   isSoundOn: 0
+  isMusicOn: 0
   PlayerGround_Pos: {x: 8.56, y: 3.293623, z: -0.88}
   School_Pos: {x: 0, y: 0, z: 0}
   Children_Room: {x: 0, y: 0, z: 0}
@@ -1875,7 +1876,7 @@ Transform:
   m_GameObject: {fileID: 1359556212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 70.2, y: -12.1, z: -19.6}
-  m_LocalScale: {x: 85, y: 0.3, z: 35}
+  m_LocalScale: {x: 85, y: 0.3, z: 41.421745}
   m_Children: []
   m_Father: {fileID: 248785965}
   m_RootOrder: 0
