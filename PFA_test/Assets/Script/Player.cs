@@ -28,18 +28,20 @@ public class Player : MonoBehaviour
 
     bool isBorder;
 
+    AudioSource audioSource;
+    [SerializeField] AudioClip[] EffectSound;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ChildRoom"))
+        if (other.CompareTag("ChildRoom")) 
         {
             SceneManager.LoadScene("PlayGround");
         }
-        else if (other.CompareTag("School"))  // 놀이터 -> 학교
+        else if (other.CompareTag("School"))  
         {
             SceneManager.LoadScene("School");
         }
-        else if (other.CompareTag("PlayGround")) // 학교 -> 놀이터
+        else if (other.CompareTag("PlayGround")) 
         {
             SceneManager.LoadScene("PlayGround");
         }
@@ -54,6 +56,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -141,8 +144,10 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        if(gameObject.transform.position.y<=dieCoordinate)
+        if (gameObject.transform.position.y<=dieCoordinate)
         {
+            audioSource.clip = EffectSound[0];
+            audioSource.Play();
             Debug.Log("플레이어 죽음");
             this.gameObject.transform.position = Save_Pos;
         }
