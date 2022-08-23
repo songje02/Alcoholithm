@@ -60,6 +60,7 @@
     <Compile Include="Assets\Script\RotationTree.cs" />
     <Compile Include="Assets\Script\LockerController.cs" />
     <Compile Include="Assets\Script\Player.cs" />
+    <Compile Include="Assets\Script\OptionTitleSC.cs" />
     <Compile Include="Assets\Script\UIManager.cs" />
     <Compile Include="Assets\Script\CameraController.cs" />
     <Compile Include="Assets\FadeInOut.cs" />

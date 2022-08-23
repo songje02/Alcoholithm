@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public GameObject player;
-    public bool isSoundOn;
+    public bool isSoundOn, isMusicOn;
 
 
     public Vector3 PlayerGround_Pos; //포탈 이동시 플레이어 위치값 변경
@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     public bool is_PlayGround;
     public bool is_Children_Room;
 
+    public AudioSource bgmPlayer;
+
+    [SerializeField] AudioClip[] BackGround_Clip;
+
 
     private void OnEnable()
     {
@@ -28,8 +32,10 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) // 씬전환시 이벤트 호출
     {
-        if (scene.name == "PlayGround")
+        if (scene.name == "ChildRoom") 
         {
+            bgmPlayer.clip = BackGround_Clip[0];
+            bgmPlayer.Play();
             is_Children_Room = true;
             is_School = false;
             is_PlayGround = true;
@@ -37,13 +43,17 @@ public class GameManager : MonoBehaviour
         }
         else if (scene.name == "SchoolSang")
         {
+            bgmPlayer.clip = BackGround_Clip[1];
+            bgmPlayer.Play();
             is_Children_Room = false;
             is_School = true;
             is_PlayGround = false;
             Instantiate(player, School_Pos, transform.rotation);
         }
-        else if (scene.name == "ChildRoom")
+        else if (scene.name == "PlayGround")
         {
+            bgmPlayer.clip = BackGround_Clip[2];
+            bgmPlayer.Play();
             is_Children_Room = false;
             is_School = false;
             is_PlayGround = true;
@@ -77,11 +87,18 @@ public class GameManager : MonoBehaviour
         is_School = false;
         is_PlayGround = false;
         isSoundOn = true;
+        isMusicOn = true;
+        bgmPlayer = GetComponent<AudioSource>();
     }
 
     public void soundToggle()
     {
         isSoundOn = !isSoundOn;
+    }
+
+    public void musicToggle()
+    {
+        isMusicOn= !isMusicOn;
     }
 
     public void gameExit()
