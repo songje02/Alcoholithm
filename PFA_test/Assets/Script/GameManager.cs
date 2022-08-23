@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
             is_Children_Room = true;
             is_School = false;
             is_PlayGround = true;
-            Instantiate(player, PlayerGround_Pos, transform.rotation);
+            Instantiate(player, Children_Room, transform.rotation);
         }
         else if (scene.name == "SchoolSang")
         {
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
             is_Children_Room = false;
             is_School = false;
             is_PlayGround = true;
-            Instantiate(player, Children_Room, transform.rotation);
+            Instantiate(player, PlayerGround_Pos, transform.rotation);
         }
     }
 
