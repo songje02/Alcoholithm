@@ -6,22 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
     public GameObject player;
     public bool isSoundOn, isMusicOn;
-
-
     public Vector3 PlayerGround_Pos; //포탈 이동시 플레이어 위치값 변경
     public Vector3 School_Pos;
     public Vector3 Children_Room;
-
-
     public bool is_School;
     public bool is_PlayGround;
     public bool is_Children_Room;
-
     public AudioSource bgmPlayer;
-
     [SerializeField] AudioClip[] BackGround_Clip;
 
 
@@ -32,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) // 씬전환시 이벤트 호출
     {
-        if (scene.name == "ChildRoom") 
+        if (scene.name == "ChildRoom")
         {
             bgmPlayer.clip = BackGround_Clip[0];
             bgmPlayer.Play();
@@ -83,7 +76,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Instantiate(player);
         is_School = false;
         is_PlayGround = false;
         isSoundOn = true;
@@ -98,7 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void musicToggle()
     {
-        isMusicOn= !isMusicOn;
+        isMusicOn = !isMusicOn;
     }
 
     public void gameExit()
@@ -108,6 +100,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

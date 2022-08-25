@@ -6,96 +6,76 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     public int jumpCount = 0;
-    public float dieCoordinate = -7.0f; 
-
+    public float dieCoordinate = -7.0f;
     public float speed = 10.0f;
     public float jumpPower = 5.0f;
-
     public float rotateSpeed = 10.0f;
-
     bool jumping;
-    
     Vector3 movement;
     float h, v;
-    float rh, rv;
     Rigidbody rb;
-
     public GameManager GM;
-
     Animator anim;
-
     Vector3 Save_Pos;
-
     bool isBorder;
-
     AudioSource audioSource;
     [SerializeField] AudioClip[] EffectSound;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ChildRoom")) 
-        {
-            SceneManager.LoadScene("PlayGround");
-        }
-        else if (other.CompareTag("School"))  
+        if (other.CompareTag("ChildRoom"))
         {
             SceneManager.LoadScene("School");
         }
-        else if (other.CompareTag("PlayGround")) 
+        else if (other.CompareTag("School"))
         {
             SceneManager.LoadScene("PlayGround");
         }
+        else if (other.CompareTag("PlayGround"))
+        {
+            SceneManager.LoadScene("End");
+        }
     }
 
-    private void Awake()
-    {
-        anim = GetComponentInChildren<Animator>();
-    }
 
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
         audioSource = GetComponent<AudioSource>();
-    }
-
-    private void FixedUpdate()
-    {
-        rh = Input.GetAxis("Horizontal");
-        rv = Input.GetAxis("Vertical");
-
-        Vector3 dir = new Vector3(rh, 0, rv);
-
-        if(!(h==0 && v==0))
-        {
-            transform.position+=dir*speed*Time.deltaTime;
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(dir), Time.deltaTime*rotateSpeed);
-        }
-
-        StopToWall();
     }
 
     private void Update()
     {
         Move();
 
-        if(jumpCount < 2)
+        if (jumpCount < 2)
         {
-           jump();
+            jump();
         }
         else jumping = false;
 
-
         run();
-       
+
         Die();
 
+        StopToWall();
     }
 
     void Move()
     {
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
+
+        Vector3 dir = new Vector3(h, 0, v);
+
+        if (!(h == 0 && v == 0))
+        {
+            transform.position += dir * speed * Time.deltaTime;
+            transform.rotation = Quaternion.Lerp(transform.rotation,
+                Quaternion.LookRotation(dir), Time.deltaTime * rotateSpeed);
+        }
 
         if (!isBorder)
         {
@@ -144,7 +124,7 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        if (gameObject.transform.position.y<=dieCoordinate)
+        if (gameObject.transform.position.y <= dieCoordinate)
         {
             audioSource.clip = EffectSound[0];
             audioSource.Play();
@@ -230,7 +210,8 @@ public class Player : MonoBehaviour
     void StopToWall()
     {
         Debug.DrawRay(transform.position, transform.forward * 5, Color.green);
-        isBorder = Physics.Raycast(transform.position, transform.forward, 5, LayerMask.GetMask("Wall"));
+        isBorder = Physics.Raycast(transform.position,
+            transform.forward, 5, LayerMask.GetMask("Wall"));
     }
 
 }
