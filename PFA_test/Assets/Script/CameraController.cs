@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
 
     Transform playerTrans;
     GameObject instatiate_player; // 생성된 플레이어
+    RaycastHit hit;
 
     void Start()
     {
@@ -32,8 +33,16 @@ public class CameraController : MonoBehaviour
             Vector3 chase_Player = Vector3.Lerp(transform.position, direction, camera_Speed * Time.deltaTime);
             transform.position = new Vector3(chase_Player.x, chase_Player.y, chase_Player.z);
         }
-
         transform.LookAt(playerTrans.position);
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 10))
+        {
+            if (hit.transform.CompareTag("wall"))
+            {
+                transform.position = hit.point;
+                Debug.Log("벽 충돌");
+            }
+        }
     }
 
 }
