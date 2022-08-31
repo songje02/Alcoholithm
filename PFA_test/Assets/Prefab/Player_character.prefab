@@ -1895,6 +1895,7 @@ GameObject:
   - component: {fileID: 5829006076724109496}
   - component: {fileID: 4161645103731713005}
   - component: {fileID: 6167867661468601267}
+  - component: {fileID: 781659385328960755}
   m_Layer: 0
   m_Name: Player_character
   m_TagString: Player
@@ -1969,11 +1970,12 @@ MonoBehaviour:
   jumpCount: 0
   dieCoordinate: -7
   speed: 5
-  jumpPower: 10
+  jumpPower: 15
   rotateSpeed: 10
   GM: {fileID: 7354266215002140269, guid: 7ffe3548f2f4ab94c8b3a5b02a6b2af5, type: 3}
   EffectSound:
   - {fileID: 8300000, guid: ba80fcada4a3705489f5ba53ed5d900c, type: 3}
+  gravity: -20
 --- !u!136 &4161645103731713005
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2084,6 +2086,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!75 &781659385328960755
+ConstantForce:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639893498598614966}
+  m_Enabled: 1
+  m_Force: {x: 0, y: -20, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!1 &6812438656990606226
 GameObject:
   m_ObjectHideFlags: 0

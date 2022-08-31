@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public int jumpCount = 0;
     public float dieCoordinate = -7.0f;
     public float speed = 10.0f;
-    public float jumpPower = 5.0f;
+    public float jumpPower = 15.0f;
     public float rotateSpeed = 10.0f;
     bool jumping;
     Vector3 movement;
@@ -20,6 +20,11 @@ public class Player : MonoBehaviour
     bool isBorder;
     AudioSource audioSource;
     [SerializeField] AudioClip[] EffectSound;
+
+
+    public float gravity = -20;
+    float Jump_Timer = 0;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -49,12 +54,29 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Move();
-
+        
         if (jumpCount < 2)
         {
-            jump();
+            if (jumpCount == 0)
+            {
+                gravity = -20;
+                jump();
+            }
+            else if (jumpCount == 1)
+            {
+                gravity = -20;
+                Jump_Timer += Time.deltaTime;
+                if (Jump_Timer >= 0.0025f)
+                {
+                    jumping = true;
+                    jump();
+                    Jump_Timer = 0;
+                }
+            }
+
         }
         else jumping = false;
+
 
         run();
 
@@ -68,13 +90,13 @@ public class Player : MonoBehaviour
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
 
-        Vector3 dir = new Vector3(h, 0, v);
+        movement = new Vector3(h, 0, v);
 
         if (!(h == 0 && v == 0))
         {
-            transform.position += dir * speed * Time.deltaTime;
+            transform.position += movement * speed * Time.deltaTime;
             transform.rotation = Quaternion.Lerp(transform.rotation,
-                Quaternion.LookRotation(dir), Time.deltaTime * rotateSpeed);
+                Quaternion.LookRotation(movement), Time.deltaTime * rotateSpeed);
         }
 
         if (!isBorder)
@@ -93,11 +115,11 @@ public class Player : MonoBehaviour
         {
             jumpCount++;
 
-
             if (jumping)
             {
-                rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
                 anim.SetBool("is_Jumping", true);
+                rb.AddForce(Vector3.up * jumpPower, ForceMode.Impulse);
+                rb.AddForce(Vector3.down * gravity);
             }
             else
             {
@@ -105,6 +127,7 @@ public class Player : MonoBehaviour
             }
 
         }
+
     }
 
     public void run()
@@ -128,7 +151,6 @@ public class Player : MonoBehaviour
         {
             audioSource.clip = EffectSound[0];
             audioSource.Play();
-            Debug.Log("플레이어 죽음");
             this.gameObject.transform.position = Save_Pos;
         }
     }
