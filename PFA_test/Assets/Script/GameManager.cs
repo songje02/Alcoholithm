@@ -17,8 +17,6 @@ public class GameManager : MonoBehaviour
     public AudioSource bgmPlayer;
     [SerializeField] AudioClip[] BackGround_Clip;
 
-    [SerializeField]
-    private GameObject Camera;
 
     private void OnEnable()
     {
@@ -34,8 +32,7 @@ public class GameManager : MonoBehaviour
             is_Children_Room = true;
             is_School = false;
             is_PlayGround = true;
-            GameObject temp =  Instantiate(player, Children_Room, transform.rotation);
-            temp.transform.SetParent(Camera.transform);
+            Instantiate(player, Children_Room, transform.rotation);
         }
         else if (scene.name == "SchoolSang")
         {

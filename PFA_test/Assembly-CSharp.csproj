@@ -61,6 +61,7 @@
     <Compile Include="Assets\Script\LockerController.cs" />
     <Compile Include="Assets\Script\Player.cs" />
     <Compile Include="Assets\Script\OptionTitleSC.cs" />
+    <Compile Include="Assets\Script\MP4Loader.cs" />
     <Compile Include="Assets\Script\UIManager.cs" />
     <Compile Include="Assets\Script\CameraController.cs" />
     <Compile Include="Assets\FadeInOut.cs" />
@@ -69,7 +70,6 @@
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\DoorController.cs" />
     <Compile Include="Assets\Script\SeesawController.cs" />
-    <Compile Include="Assets\Script\MP4Loader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
