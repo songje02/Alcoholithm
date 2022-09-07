@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
             }
             else if (jumpCount == 1)
             {
-                gravity = -20;
+                gravity = -10;
                 Jump_Timer += Time.deltaTime;
                 if (Jump_Timer >= 0.0025f)
                 {
