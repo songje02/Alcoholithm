@@ -31253,7 +31253,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bb0df2b55c0225a49ae788c8894ee033, type: 3}
   - {fileID: 8300000, guid: 57e4d9f5965d14846884ce0a86179535, type: 3}
   - {fileID: 8300000, guid: fc9e44aee98d57941aee0fce1d675ad7, type: 3}
-  Camera: {fileID: 0}
 --- !u!4 &847339375
 Transform:
   m_ObjectHideFlags: 0
@@ -37732,10 +37731,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
