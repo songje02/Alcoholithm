@@ -30,9 +30,7 @@ public class Player : MonoBehaviour
     Vector3 Cam_dir;
 
     [Tooltip("PlayerMove_Renewal")]
-    //private CharacterController controller;
     public float walk_speed = 10.0f;
-    private Vector3 moveDir;
 
     public float gravity = -20;
     float Jump_Timer = 0;
@@ -61,13 +59,11 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        Follow_Cam = GameObject.Find("PlayerFollowCamera");
+        Follow_Cam = GameObject.Find("Main Camera");
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
         audioSource = GetComponent<AudioSource>();
-        //controller = GameObject.Find("Player_character(Clone)").GetComponent<CharacterController>();
-        //Debug.Log(controller);
     }
 
     private void Update()
@@ -115,7 +111,6 @@ public class Player : MonoBehaviour
         {
             if (!(moveInput.x == 0 && moveInput.y == 0))
             {
-                Cam_dir = Follow_Cam.transform.localRotation * Vector3.forward;
                 Target_Rotate = Mathf.Atan2(moveInput.x, moveInput.y) * Mathf.Rad2Deg + Follow_Cam.transform.eulerAngles.y;
                 float rotaton = Mathf.SmoothDampAngle(transform.eulerAngles.y, Target_Rotate, ref rotationVelocity, Rotation_SmoothTime);
                 transform.rotation = Quaternion.Euler(0.0f, rotaton, 0.0f);
