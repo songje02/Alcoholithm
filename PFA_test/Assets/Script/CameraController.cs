@@ -12,6 +12,9 @@ public class CameraController : MonoBehaviour
     GameObject instatiate_player; // 생성된 플레이어
     RaycastHit hit;
 
+    [SerializeField]
+    private Transform cameraArm;
+
     void Start()
     {
         instatiate_player = GameObject.Find("Player_character(Clone)");
@@ -21,8 +24,28 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        LookAround();
     }
+
+
+    private void LookAround()
+    {
+        Vector2 mouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        Vector3 camAngle = cameraArm.rotation.eulerAngles;
+
+        float x = camAngle.x - mouseDelta.y;
+        if (x < 180.0f)
+        {
+            x = Mathf.Clamp(x, -1.0f, 70.0f);
+        }
+        else
+        {
+            x = Mathf.Clamp(x, 335f, 361f);
+        }
+
+        cameraArm.rotation = Quaternion.Euler(camAngle.x - mouseDelta.y, camAngle.y + mouseDelta.x, camAngle.z);
+    }
+
 
     private void LateUpdate()
     {
@@ -33,7 +56,7 @@ public class CameraController : MonoBehaviour
             Vector3 chase_Player = Vector3.Lerp(transform.position, direction, camera_Speed * Time.deltaTime);
             transform.position = new Vector3(chase_Player.x, chase_Player.y, chase_Player.z);
         }
-        transform.LookAt(playerTrans.position);
+        
 
         if (Physics.Raycast(transform.position, transform.forward, out hit, 10))
         {

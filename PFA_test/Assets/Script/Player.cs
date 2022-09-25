@@ -92,12 +92,12 @@ public class Player : MonoBehaviour
 
         movement = new Vector3(h, 0, v);
 
-        if (!(h == 0 && v == 0))
-        {
-            transform.position += movement * speed * Time.deltaTime;
-            transform.rotation = Quaternion.Lerp(transform.rotation,
-                Quaternion.LookRotation(movement), Time.deltaTime * rotateSpeed);
-        }
+        //if (!(h == 0 && v == 0))
+        //{
+        //    transform.position += movement * speed * Time.deltaTime;
+        //    transform.rotation = Quaternion.Lerp(transform.rotation,
+        //        Quaternion.LookRotation(movement), Time.deltaTime * rotateSpeed);
+        //}
 
         if (!isBorder)
         {
