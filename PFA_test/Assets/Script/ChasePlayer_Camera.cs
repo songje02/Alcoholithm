@@ -45,7 +45,6 @@ public class ChasePlayer_Camera : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(player.name);
         if (player == null)
         {
             player = GameObject.Find("Player_character(Clone)");

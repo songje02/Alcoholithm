@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 public class Player : MonoBehaviour
 {
@@ -21,6 +22,17 @@ public class Player : MonoBehaviour
     AudioSource audioSource;
     [SerializeField] AudioClip[] EffectSound;
 
+    [Tooltip ("Camera Roteate Object")]
+    private GameObject Follow_Cam;
+    private float Target_Rotate;
+    private float rotationVelocity;
+    private float Rotation_SmoothTime = 0.12f;
+    Vector3 Cam_dir;
+
+    [Tooltip("PlayerMove_Renewal")]
+    //private CharacterController controller;
+    public float walk_speed = 10.0f;
+    private Vector3 moveDir;
 
     public float gravity = -20;
     float Jump_Timer = 0;
@@ -42,13 +54,20 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        
+    }
 
     void Start()
     {
+        Follow_Cam = GameObject.Find("PlayerFollowCamera");
         anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         rb.constraints = RigidbodyConstraints.FreezeRotation;
         audioSource = GetComponent<AudioSource>();
+        //controller = GameObject.Find("Player_character(Clone)").GetComponent<CharacterController>();
+        //Debug.Log(controller);
     }
 
     private void Update()
@@ -87,25 +106,26 @@ public class Player : MonoBehaviour
 
     void Move()
     {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
+        Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        
+        bool isMove = moveInput.magnitude != 0;
 
-        movement = new Vector3(h, 0, v);
 
-        //if (!(h == 0 && v == 0))
-        //{
-        //    transform.position += movement * speed * Time.deltaTime;
-        //    transform.rotation = Quaternion.Lerp(transform.rotation,
-        //        Quaternion.LookRotation(movement), Time.deltaTime * rotateSpeed);
-        //}
-
-        if (!isBorder)
+        if (isMove)
         {
-            movement = new Vector3(h, 0, v).normalized;
-            transform.position += movement * speed * Time.deltaTime;
+            if (!(moveInput.x == 0 && moveInput.y == 0))
+            {
+                Cam_dir = Follow_Cam.transform.localRotation * Vector3.forward;
+                Target_Rotate = Mathf.Atan2(moveInput.x, moveInput.y) * Mathf.Rad2Deg + Follow_Cam.transform.eulerAngles.y;
+                float rotaton = Mathf.SmoothDampAngle(transform.eulerAngles.y, Target_Rotate, ref rotationVelocity, Rotation_SmoothTime);
+                transform.rotation = Quaternion.Euler(0.0f, rotaton, 0.0f);
+
+                Vector3 targetDirection = Quaternion.Euler(0.0f, Target_Rotate, 0.0f) * Vector3.forward;
+                transform.position += targetDirection.normalized * speed * Time.deltaTime;
+            }
         }
 
-        anim.SetBool("is_Walking", movement != Vector3.zero);
+        anim.SetBool("is_Walking", isMove);
     }
 
 

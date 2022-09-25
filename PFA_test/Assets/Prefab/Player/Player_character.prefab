@@ -2006,6 +2006,7 @@ MonoBehaviour:
   GM: {fileID: 7354266215002140269, guid: 7ffe3548f2f4ab94c8b3a5b02a6b2af5, type: 3}
   EffectSound:
   - {fileID: 8300000, guid: ba80fcada4a3705489f5ba53ed5d900c, type: 3}
+  walk_speed: 3
   gravity: -20
 --- !u!136 &4161645103731713005
 CapsuleCollider:
