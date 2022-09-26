@@ -8,14 +8,18 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject player;
     public bool isSoundOn, isMusicOn;
-    public Vector3 PlayerGround_Pos; //포탈 이동시 플레이어 위치값 변경
-    public Vector3 School_Pos;
-    public Vector3 Children_Room;
+
     public bool is_School;
     public bool is_PlayGround;
     public bool is_Children_Room;
     public AudioSource bgmPlayer;
     [SerializeField] AudioClip[] BackGround_Clip;
+
+
+    [Header("Player_Pos")]
+    public Vector3 PlayerGround_Pos; //포탈 이동시 플레이어 위치값 변경
+    public Vector3 School_Pos;
+    public Vector3 Children_Room;
 
 
     private void OnEnable()
@@ -31,7 +35,7 @@ public class GameManager : MonoBehaviour
             bgmPlayer.Play();
             is_Children_Room = true;
             is_School = false;
-            is_PlayGround = true;
+            is_PlayGround = false;
             Instantiate(player, Children_Room, transform.rotation);
         }
         else if (scene.name == "SchoolSang")
