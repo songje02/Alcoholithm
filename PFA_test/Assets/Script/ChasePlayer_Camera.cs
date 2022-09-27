@@ -23,7 +23,10 @@ public class ChasePlayer_Camera : MonoBehaviour
     [Header("CameraSetting")]
     public Vector3 Camera_StartPos;
     public GameObject CinemachineCamera_Target;
+    float Camera_MaxDistance = 15.0f;
+    float Camera_MinDistance = 0.0f;
 
+    CinemachineComponentBase componentBase;
 
     void Start()
     {
@@ -33,21 +36,50 @@ public class ChasePlayer_Camera : MonoBehaviour
         player = GameObject.Find("Player_character(Clone)");
         CinemachineCamera_Target = player.transform.GetChild(0).gameObject;
         _cinemachineTargetYaw = CinemachineCamera_Target.transform.rotation.eulerAngles.y;
+        componentBase = vcam.GetCinemachineComponent(CinemachineCore.Stage.Body);
     }
 
     void Update()
     {
-        if (player == null)
-        {
-            player = GameObject.Find("Player_character(Clone)");
+        //if (player == null)
+        //{
+        //    player = GameObject.Find("Player_character(Clone)");
 
-            if(player != null)
-            {
+        //    if(player != null)
+        //    {
                 
-            }
-        }
+        //    }
+        //}
         vcam.Follow = CinemachineCamera_Target.transform;
 
+
+        RaycastHit hit;
+        Vector3 Cam_Dir = cameraArm.transform.position - CinemachineCamera_Target.transform.position;
+
+        Debug.DrawRay(CinemachineCamera_Target.transform.position, Cam_Dir, Color.green);
+        int LayerMaskRayCast = LayerMask.NameToLayer("wall");
+        if (Physics.Raycast(CinemachineCamera_Target.transform.position, Cam_Dir, out hit, Camera_MaxDistance, LayerMask.GetMask("Wall")))
+        {
+            if (componentBase is Cinemachine3rdPersonFollow)
+            {
+                //Vector3 hit_positon = CinemachineCamera_Target.transform.position - hit.transform.position;
+                //float hit_direction = (hit.transform.position - CinemachineCamera_Target.transform.position).magnitude;
+                float final_distance = Mathf.Clamp(hit.distance, Camera_MinDistance, Camera_MaxDistance);
+                Debug.Log(final_distance);
+                
+                (componentBase as Cinemachine3rdPersonFollow).CameraDistance = final_distance;
+            }
+        }
+        else
+        {
+            if (componentBase is Cinemachine3rdPersonFollow)
+            {
+                if ((componentBase as Cinemachine3rdPersonFollow).CameraDistance < 15.0f)
+                {
+                    (componentBase as Cinemachine3rdPersonFollow).CameraDistance = Camera_MaxDistance;
+                }
+            }
+        }
     }
 
 
@@ -61,6 +93,7 @@ public class ChasePlayer_Camera : MonoBehaviour
 
         CinemachineCamera_Target.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride, _cinemachineTargetYaw, 0.0f);
 
+     
     }
 
     private static float ClampAngle(float IfAngle, float min, float max)
@@ -75,5 +108,6 @@ public class ChasePlayer_Camera : MonoBehaviour
     private void LateUpdate()
     {
         CameraRotation();
+
     }
 }
