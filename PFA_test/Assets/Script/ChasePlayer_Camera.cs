@@ -62,11 +62,7 @@ public class ChasePlayer_Camera : MonoBehaviour
         {
             if (componentBase is Cinemachine3rdPersonFollow)
             {
-                //Vector3 hit_positon = CinemachineCamera_Target.transform.position - hit.transform.position;
-                //float hit_direction = (hit.transform.position - CinemachineCamera_Target.transform.position).magnitude;
                 float final_distance = Mathf.Clamp(hit.distance, Camera_MinDistance, Camera_MaxDistance);
-                Debug.Log(final_distance);
-                
                 (componentBase as Cinemachine3rdPersonFollow).CameraDistance = final_distance;
             }
         }
