@@ -3326,7 +3326,7 @@ GameObject:
   - component: {fileID: 109454526}
   - component: {fileID: 109454525}
   - component: {fileID: 109454524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1F_OutWall (3)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -11232,7 +11232,7 @@ GameObject:
   - component: {fileID: 340653656}
   - component: {fileID: 340653655}
   - component: {fileID: 340653654}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 2F_Jump_Obj
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -20759,7 +20759,7 @@ GameObject:
   - component: {fileID: 598879302}
   - component: {fileID: 598879301}
   - component: {fileID: 598879300}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 1F_LastHallway
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -21303,7 +21303,7 @@ GameObject:
   - component: {fileID: 611234598}
   - component: {fileID: 611234597}
   - component: {fileID: 611234596}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottom
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -28644,7 +28644,7 @@ GameObject:
   - component: {fileID: 801840185}
   - component: {fileID: 801840184}
   - component: {fileID: 801840183}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottom (2)
   m_TagString: ground
   m_Icon: {fileID: 0}
@@ -41053,7 +41053,7 @@ GameObject:
   - component: {fileID: 1145586260}
   - component: {fileID: 1145586259}
   - component: {fileID: 1145586258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bottom (9)
   m_TagString: ground
   m_Icon: {fileID: 0}

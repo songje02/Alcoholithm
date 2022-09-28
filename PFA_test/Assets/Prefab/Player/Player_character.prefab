@@ -2019,9 +2019,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 6
-  m_Height: 32
+  m_Height: 28.696863
   m_Direction: 1
-  m_Center: {x: 0.82, y: 13, z: 0.9}
+  m_Center: {x: 0.8200002, y: 14.651574, z: 0.89999974}
 --- !u!82 &6167867661468601267
 AudioSource:
   m_ObjectHideFlags: 0

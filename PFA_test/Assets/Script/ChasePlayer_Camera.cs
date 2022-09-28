@@ -13,7 +13,6 @@ public class ChasePlayer_Camera : MonoBehaviour
 
     private float _cinemachineTargetYaw;
     private float _cinemachineTargetPitch;
-    private float CameraAngleOverride;
 
     public float BottomClamp = 0.0f;
     public float TopClamp = 180.0f;
@@ -57,7 +56,7 @@ public class ChasePlayer_Camera : MonoBehaviour
         Vector3 Cam_Dir = cameraArm.transform.position - CinemachineCamera_Target.transform.position;
 
         Debug.DrawRay(CinemachineCamera_Target.transform.position, Cam_Dir, Color.green);
-        int LayerMaskRayCast = LayerMask.NameToLayer("wall");
+
         if (Physics.Raycast(CinemachineCamera_Target.transform.position, Cam_Dir, out hit, Camera_MaxDistance, LayerMask.GetMask("Wall")))
         {
             if (componentBase is Cinemachine3rdPersonFollow)
@@ -87,7 +86,7 @@ public class ChasePlayer_Camera : MonoBehaviour
         _cinemachineTargetPitch -= Input.GetAxis("Mouse Y") * Sensitivity;
         _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
 
-        CinemachineCamera_Target.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride, _cinemachineTargetYaw, 0.0f);
+        CinemachineCamera_Target.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch, _cinemachineTargetYaw, 0.0f);
 
      
     }

@@ -7,7 +7,6 @@ using Cinemachine;
 public class Player : MonoBehaviour
 {
     public int jumpCount = 0;
-    public float dieCoordinate = 10.0f;
     private float speed = 0.0f;
     public float WalkSpeed = 5.0f;
     public float RunSpeed = 15.0f;
@@ -28,8 +27,6 @@ public class Player : MonoBehaviour
     private float rotationVelocity;
     private float Rotation_SmoothTime = 0.12f;
 
-
-    [Tooltip("PlayerMove_Renewal")]
     public float gravity = -20;
     float Jump_Timer = 0;
 
