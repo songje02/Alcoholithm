@@ -43,7 +43,7 @@ public class Player : MonoBehaviour
         }
         else if (other.CompareTag("PlayGround"))
         {
-            SceneManager.LoadScene("End");
+            SceneManager.LoadScene("EndingScene");
         }
     }
 
@@ -241,6 +241,16 @@ public class Player : MonoBehaviour
             if (collision.transform.GetChild(0) != null)
             {
                 GameObject obj1 = GameObject.Find("Save_5");
+                obj1.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                Save_Pos = obj1.transform.position;
+                Jump_Reset();
+            }
+        }
+        else if (collision.gameObject.CompareTag("Save_point_6"))
+        {
+            if (collision.transform.GetChild(0) != null)
+            {
+                GameObject obj1 = GameObject.Find("Save_6");
                 obj1.gameObject.transform.GetChild(0).gameObject.SetActive(true);
                 Save_Pos = obj1.transform.position;
                 Jump_Reset();

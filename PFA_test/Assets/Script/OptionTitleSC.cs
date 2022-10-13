@@ -14,7 +14,14 @@ public class OptionTitleSC : MonoBehaviour
 
     void Start()
     {
-        //gameManager = gameObject.GetComponent<GameManager>();
+        //title1 = GameObject.Find("Canvas").transform.GetChild(0).transform.GetChild(0).gameObject;
+        //Debug.Log(title1.name);
+        //title2 = GameObject.Find("Canvas").transform.GetChild(0).transform.GetChild(1).gameObject;
+        //Debug.Log(title2.name);
+        //check1 = GameObject.Find("Canvas").transform.GetChild(0).transform.GetChild(1).transform.GetChild(0).gameObject;
+        //Debug.Log(check1.name);
+        //check2 = GameObject.Find("Canvas").transform.GetChild(0).transform.GetChild(1).transform.GetChild(1).gameObject;
+        //Debug.Log(check2.name);
         gameManager = GameObject.Find("GameManager").gameObject.GetComponent<GameManager>();
         state = 0;
         applyScreen();

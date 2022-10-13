@@ -30,7 +30,7 @@ public class ChasePlayer_Camera : MonoBehaviour
     void Start()
     {
         this.transform.position = Camera_StartPos;
-        vcam = GetComponent<CinemachineVirtualCamera>();
+        vcam = GameObject.Find("PlayerFollowCamera").GetComponent<CinemachineVirtualCamera>();
         player = null;
         player = GameObject.Find("Player_character(Clone)");
         CinemachineCamera_Target = player.transform.GetChild(0).gameObject;

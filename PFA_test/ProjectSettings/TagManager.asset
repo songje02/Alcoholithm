@@ -15,6 +15,7 @@ TagManager:
   - Save_point_4
   - Save_point_5
   - Die
+  - Save_point_6
   layers:
   - Default
   - TransparentFX

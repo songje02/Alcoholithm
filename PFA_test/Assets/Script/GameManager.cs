@@ -31,30 +31,33 @@ public class GameManager : MonoBehaviour
     {
         if (scene.name == "ChildRoom")
         {
+            Instantiate(player, Children_Room, transform.rotation);
+            bgmPlayer = GameObject.Find("Main Camera").GetComponent<AudioSource>();
             bgmPlayer.clip = BackGround_Clip[0];
             bgmPlayer.Play();
             is_Children_Room = true;
             is_School = false;
             is_PlayGround = false;
-            Instantiate(player, Children_Room, transform.rotation);
         }
-        else if (scene.name == "SchoolSang")
+        else if (scene.name == "School")
         {
+            Instantiate(player, School_Pos, transform.rotation);
+            bgmPlayer = GameObject.Find("Main Camera").GetComponent<AudioSource>();
             bgmPlayer.clip = BackGround_Clip[1];
             bgmPlayer.Play();
             is_Children_Room = false;
             is_School = true;
             is_PlayGround = false;
-            Instantiate(player, School_Pos, transform.rotation);
         }
         else if (scene.name == "PlayGround")
         {
+            Instantiate(player, PlayerGround_Pos, transform.rotation);
+            bgmPlayer = GameObject.Find("Main Camera").GetComponent<AudioSource>();
             bgmPlayer.clip = BackGround_Clip[2];
             bgmPlayer.Play();
             is_Children_Room = false;
             is_School = false;
             is_PlayGround = true;
-            Instantiate(player, PlayerGround_Pos, transform.rotation);
         }
     }
 
@@ -84,7 +87,6 @@ public class GameManager : MonoBehaviour
         is_PlayGround = false;
         isSoundOn = true;
         isMusicOn = true;
-        bgmPlayer = GetComponent<AudioSource>();
     }
 
     public void soundToggle()
