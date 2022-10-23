@@ -1318,8 +1318,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 57e4d9f5965d14846884ce0a86179535, type: 3}
   - {fileID: 8300000, guid: fc9e44aee98d57941aee0fce1d675ad7, type: 3}
   PlayerGround_Pos: {x: 8.56, y: 3.293623, z: -0.88}
-  School_Pos: {x: -245.7, y: 105.66, z: -110.5}
-  Children_Room: {x: -705.7375, y: 7.678647, z: -1825.689}
+  School_Pos: {x: -202.3, y: 5.01, z: -186.9}
+  Children_Room: {x: -886.6, y: 7.34, z: -1829.05}
 --- !u!4 &643812172
 Transform:
   m_ObjectHideFlags: 0
